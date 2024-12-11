@@ -65,8 +65,10 @@ class ModelInterface:
                 temperature=0.7,
                 repetition_penalty=1.1
             )
-            # Convert TextBlock to string
-            return str(response) if response else "[No response generated]"
+            # Extract just the text content from the TextBlock
+            if hasattr(response, 'text'):
+                return response.text
+            return str(response)
         except Exception as e:
             print(f"Error calling Hugging Face API: {str(e)}")
             return "[Error: Could not generate Hugging Face model's analysis]"
@@ -121,8 +123,8 @@ Please structure your response with clear sections and provide specific examples
             
         elif model == "midnight_miqu":
             if analysis_type == "chat_system":
-                # Midnight Miqu for creative chat system design
-                prompt = f"""You are Midnight Miqu, specializing in understanding technical community dynamics.
+                # For creative chat system design
+                prompt = f"""You are an AI expert in understanding technical community dynamics.
 Analyze this Twitter profile's communication patterns, focusing on:
 1. Technical knowledge presentation style
 2. Community teaching and mentoring approach
@@ -136,7 +138,7 @@ Express your insights in a way that helps create an authentic technical communit
             
         else:  # gpt4
             if analysis_type == "creative":
-                # GPT-4 for innovative technical content analysis
+                # For innovative technical content analysis
                 prompt = f"""You are an AI expert in technical community analysis and educational psychology.
 Analyze this Twitter profile's approach to technical education and community building:
 1. Teaching methodology and knowledge sharing
@@ -149,18 +151,27 @@ Analyze this Twitter profile's approach to technical education and community bui
 
 Structure your response to highlight both quantitative metrics and qualitative observations."""
 
-        # Call appropriate model
+        # Call appropriate model and ensure string response
+        response = None
         if model == "claude":
-            return self._call_claude(prompt)
+            response = self._call_claude(prompt)
         elif model == "midnight_miqu":
-            return self._call_midnight_miqu(prompt)
+            response = self._call_midnight_miqu(prompt)
         else:
-            return self._call_gpt4(prompt)
+            response = self._call_gpt4(prompt)
+            
+        # Ensure we return a string
+        return str(response) if response is not None else "[No response generated]"
 
 def save_analysis(analysis: Dict[str, str], output_file: str):
     """Save the analysis results to a JSON file."""
+    # Convert any non-string values to strings
+    serializable_analysis = {
+        k: str(v) if not isinstance(v, str) else v
+        for k, v in analysis.items()
+    }
     with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(analysis, f, indent=2, ensure_ascii=False)
+        json.dump(serializable_analysis, f, indent=2, ensure_ascii=False)
 
 def main():
     import argparse

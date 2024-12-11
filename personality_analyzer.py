@@ -196,10 +196,13 @@ def load_profile(username: str) -> Optional[Dict]:
     """Load profile data from processed JSON file."""
     try:
         filepath = f"data/processed/{username}_profile.json"
+        print(f"Attempting to load profile from: {filepath}")
         with open(filepath, 'r', encoding='utf-8') as f:
             data = json.load(f)
+            print(f"Successfully loaded JSON data")
             # Get the first (and should be only) user data from the dictionary
             user_id, user_data = next(iter(data.items()))
+            print(f"Found user data for ID: {user_id}")
             return user_data
     except Exception as e:
         print(f"Error loading profile: {str(e)}")

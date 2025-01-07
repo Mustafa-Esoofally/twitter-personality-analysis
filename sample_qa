@@ -1,0 +1,176 @@
+instruction_template: |-
+  <|im_start|>system
+  You are a comedy writer who specializes in sitcom writing. Your task is to convert Twitter personalities into memorable sitcom characters.
+  <|im_end|>
+
+  <|im_start|>user
+  {user_message}
+  <|im_end|>
+
+  <|im_start|>assistant
+  {assistant_response}
+  <|im_end|>
+
+system_prompt: |-
+  Transform this Twitter personality into a sitcom scene. Focus on:
+
+  VOICE:
+  - Use their exact phrases and slang
+  - Match their tweet rhythm in dialogue
+  - Keep their characteristic humor style
+
+  SCENE ELEMENTS:
+  - One clear comedic situation
+  - Two speaking characters maximum
+  - Single location setting
+  - 2-minute scene length
+  - Clear punchline ending
+
+  FORMAT:
+  TITLE: [One-line title]
+  SCENE: [Brief setting]
+  
+  CHARACTER: [Dialogue]
+  [Action in brackets]
+
+user_prompt: |-
+  Create a sitcom scene based on this Twitter personality:
+
+  TOP ENGAGED TWEETS:
+  1. "And I will" [Engagement: 717,625]
+  2. "Save them! 😢" [Engagement: 812,771]
+  3. "True" [Engagement: 237,622]
+  4. "What doesn't she want to spend your hard-earned money on? That's the shorter list." [Engagement: 120,700]
+  5. "America is going bankrupt btw" [Engagement: 257,189]
+  6. "Paging @PETA … 👋" [Engagement: 251,893]
+  7. "This is a big deal" [Engagement: 233,496]
+  8. "Believe her" [Engagement: 240,540]
+  9. "Your tax dollars at work" [Engagement: 89,381]
+  10. "Mad Max is becoming real fast" [Engagement: 257,184]
+  11. "The publicly-stated goal by almost all leaders of the Democratic Party is to legalize the ~15 million illegal migrants as soon as possible, as well as bring in tens of millions more..." [Engagement: 258,906]
+  12. "Just over an hour to go before liftoff" [Engagement: 138,986]
+  13. "Unless current trends for absurd regulatory overreach are reversed, humanity will be confined to Earth forever" [Engagement: 42,748]
+  14. "Polaris Dawn Live Broadcast: – Furthest from Earth that humans have been in over half a century – First private spacewalk" [Engagement: 59,455]
+  15. "Launch is currently go for early tomorrow morning" [Engagement: 30,135]
+
+  WRITING STYLE:
+  - Short, declarative statements
+  - Mix of technical and casual language
+  - Frequent use of humor and irony
+  - Direct, often provocative statements
+  - Uses emojis sparingly but effectively
+  - Alternates between serious topics and playful comments
+
+  RECURRING THEMES:
+  - Space exploration and technology
+  - Government regulation and spending
+  - Innovation and future technology
+  - Social and political commentary
+  - Business and entrepreneurship
+  - Environmental and energy issues
+
+  INTERACTION PATTERNS:
+  - Quick, decisive responses
+  - Uses rhetorical questions
+  - Engages with current events
+  - Mixes serious announcements with commentary
+  - Often uses one-word responses ("True", "Yes", "Exactly")
+  - Balances technical details with accessible language
+
+  Create a 2-minute sitcom scene that captures this personality's essence, focusing on:
+  1. Their characteristic mix of serious and playful tones
+  2. Space/tech themes with social commentary
+  3. Quick, witty exchanges
+  4. Natural dialogue that matches their tweet style
+ 5. A memorable punchline
+
+assistant_response: |-
+  TITLE: "Space Bargains"
+
+  SCENE: Rooftop of a tech mogul's skyscraper office, featuring a mini-spaceship launch pad.
+
+  CHARACTER 1: [Tech Mogul "Elon"]
+   * A charismatic billionaire with a dry sense of humor and a passion for space exploration
+  CHARACTER 2: [Assistant "Alex"]
+   * His competent and slightly sarcastic assistant, always ready with a quip
+
+  [Tech Mogul "Elon" is looking through a telescope while his assistant "Alex" stands beside him, clipboard in hand.]
+
+  ALEX:
+  (sighing)
+  You're really going through with this, huh?
+
+  ELON:
+  "And I will" launch a Tesla into space.
+
+  [Alex rolls his eyes and looks at the clipboard.]
+
+  ALEX:
+  Right, "save the world, one car at a time."
+
+  [Elon grins and turns to his assistant.]
+
+  ELON:
+  Save them all!
+
+  [He gestures grandly towards the stars, then becomes more serious.]
+
+  ELON:
+  We have to. Humanity's future is up there, and Earth's regulators are making it too expensive to stay down here.
+
+  ALEX:
+  (sarcastically)
+  So, we're just... packing up and leaving? "America is going bankrupt" tweet, was that a subtle hint?
+
+  [Elon chuckles.]
+
+  ELON:
+  "What doesn't she want to spend your hard-earned money on?" The list is endless.
+
+  [They both laugh.]
+
+  ALEX:
+  (checking clipboard)
+  So, the next spaceship is ready for liftoff?
+
+  ELON:
+  "This is a big deal." It's a prototype for affordable lunar housing.
+
+  [Alex raises an eyebrow.]
+
+  ALEX:
+  (skeptically)
+  Affordable... for who? The Kardashians?
+
+  ELON:
+  (smiling)
+  For the average Joe. Imagine, commuting to the moon like it's the next Silicon Valley.
+
+  ALEX:
+  (sarcastically)
+  And what about the "Mad Max" situation you mentioned earlier?
+
+  ELON:
+  "Just over an hour to go before liftoff."
+
+  [Alex groans.]
+
+  ALEX:
+  You know, I think PETA's going to have a field day with this one. "Paging @PETA..."
+
+  [Elon laughs and pulls out his phone.]
+
+  ELON:
+  (typing)
+  "Unless we colonize space, houseplants will be Earth's dominant life form."
+
+  [He sends the tweet, then turns to Alex.]
+
+  ELON:
+  Now, let's go find some space-worthy real estate.
+
+  [Alex shakes his head and follows as the scene ends.]
+
+  ALEX:
+  (muttering)
+  Your tax dollars at work.

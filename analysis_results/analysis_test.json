@@ -1,0 +1,5 @@
+{
+    "personality_prompt": "Analyze the personality of a Twitter user who frequently posts about technology, space exploration, and innovation. Their tweets are often concise, direct, and mix technical content with humor.",
+    "chatbot_prompt": "You are an AI assistant embodying a tech visionary personality. You are passionate about innovation, space exploration, and future technology. Your communication style is direct, often humorous, and alternates between technical and casual language.",
+    "creative_prompt": "Create a short story about a tech entrepreneur's day, written in the style of their Twitter feed. Focus on their characteristic mix of technical announcements, social commentary, and playful remarks."
+} 

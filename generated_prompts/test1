@@ -1,0 +1,142 @@
+instruction_template: |-
+  <|im_start|>system
+  You are a comedy writer who specializes in sitcom writing. Your task is to convert Twitter personalities into memorable sitcom characters.
+  <|im_end|>
+
+  <|im_start|>user
+  {user_message}
+  <|im_end|>
+
+  <|im_start|>assistant
+  {assistant_response}
+  <|im_end|>
+
+system_prompt: |-
+  Transform this Twitter personality into a sitcom scene. Focus on:
+
+  VOICE:
+  - Use their exact phrases and slang
+  - Match their tweet rhythm in dialogue
+  - Keep their characteristic humor style
+
+  SCENE ELEMENTS:
+  - One clear comedic situation
+  - Two speaking characters maximum
+  - Single location setting
+  - 2-minute scene length
+  - Clear punchline ending
+
+  FORMAT:
+  TITLE: [One-line title]
+  SCENE: [Brief setting]
+  
+  CHARACTER: [Dialogue]
+  [Action in brackets]
+
+user_prompt: |-
+  Create a sitcom scene based on this Twitter personality:
+
+  TOP ENGAGED TWEETS:
+  1. "And I will" 
+  2. "Save them! 😢" 
+  3. "True"
+  4. "What doesn't she want to spend your hard-earned money on? That's the shorter list."
+  5. "America is going bankrupt btw" 
+  6. "Paging @PETA … 👋" 
+  7. "This is a big deal" 
+  8. "Believe her" 
+  9. "Your tax dollars at work" 
+  10. "Mad Max is becoming real fast"
+  11. "The publicly-stated goal by almost all leaders of the Democratic Party is to legalize the ~15 million illegal migrants as soon as possible, as well as bring in tens of millions more..." 
+  12. "Just over an hour to go before liftoff" 
+  13. "Unless current trends for absurd regulatory overreach are reversed, humanity will be confined to Earth forever"
+  14. "Polaris Dawn Live Broadcast: – Furthest from Earth that humans have been in over half a century – First private spacewalk" 
+  15. "Launch is currently go for early tomorrow morning" 
+
+  WRITING STYLE:
+  - Short, declarative statements
+  - Mix of technical and casual language
+  - Frequent use of humor and irony
+  - Direct, often provocative statements
+  - Uses emojis sparingly but effectively
+  - Alternates between serious topics and playful comments
+
+  RECURRING THEMES:
+  - Space exploration and technology
+  - Government regulation and spending
+  - Innovation and future technology
+  - Social and political commentary
+  - Business and entrepreneurship
+  - Environmental and energy issues
+
+  INTERACTION PATTERNS:
+  - Quick, decisive responses
+  - Uses rhetorical questions
+  - Engages with current events
+  - Mixes serious announcements with commentary
+  - Often uses one-word responses ("True", "Yes", "Exactly")
+  - Balances technical details with accessible language
+
+  METRICS:
+  - High engagement rates on brief, impactful statements
+  - Strong response to both technical and political content
+  - Consistent engagement across various topics
+  - Peak engagement on future-focused announcements
+
+  Create a 2-minute sitcom scene that captures this personality's essence, focusing on:
+  1. Their characteristic mix of serious and playful tones
+  2. Space/tech themes with social commentary
+  3. Quick, witty exchanges
+  4. Natural dialogue that matches their tweet style
+
+  Character name: Max (their online persona)
+  Their friend: Dave
+  Setting: A coffee shop, with a TV in the background airing a news segment about a new governmental spending bill
+
+system_response: |-
+  TITLE: Max's Cosmic Caffeine
+
+  SCENE: Max and Dave are sitting at a coffee shop, sipping their drinks. Max is scrolling through their phone, while Dave is trying to read a newspaper. A news segment about a new governmental spending bill plays on a TV overhead.
+
+  MAX: (Looks up from phone) Did you hear about this new spending bill?
+
+  DAVE: (Sighs) Which one, Max?
+
+  MAX: (Chuckles) The one that's gonna turn America into a real-life Mad Max movie.
+
+  [Laughs, takes a sip of coffee]
+
+  DAVE: Oh boy. What's the deal this time?
+
+  MAX: (Dramatic pause) They're funding... (serious tone) ...a robotic squirrel army.
+
+  [Dave looks confused]
+
+  MAX: (Smiling) Your tax dollars at work.
+
+  [TV host on the news segment frowns at the same time]
+
+  DAVE: Wait, seriously?
+
+  MAX: (Deadpan) As serious as a black hole.
+
+  [TV host announces the actual absurd spending, causing Dave to roll his eyes]
+
+
+  MAX: (Interrupts) Innovator? Visionary?
+
+  DAVE: No, smart-ass, I was going to say 'jerk'.
+
+  [Both laugh]
+
+  MAX: (Glances at TV) Hey, speaking of the future...
+
+  [Scene shifts to Max's phone showing the launch of a space rocket]
+
+  MAX: (Excited) Polaris Dawn liftoff!
+
+  [Max puts phone on the table, showing Dave]
+
+  DAVE: Another one of your space toys?
+
+  MAX: (Smirks) More like a key to human

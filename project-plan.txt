@@ -1,0 +1,68 @@
+Twitter Personality Analysis & Prompt Generation
+
+instruction templates - by itself
+
+system prompts - style Given an input. You are tasked with
+e.g comedy 
+
+And user message after that
+- list of relevant profile tweets.
+
+----
+Few shot prompting 
+
+Assistant 
+
+Overview
+Design and implement a prompt engineering system that analyzes Twitter data to generate personality insights and create effective chatbot prompts.
+
+Required Resources
+- Twitter data from selected profiles (you may find the raw JSON here)
+- Access to three models:
+  - Anthropic's Claude
+  - Midnight Miqu 70B (https://huggingface.co/sophosympatheia/Midnight-Miqu-70B-v1.0)
+  - Model of your choice
+
+1. Process and clean the raw Twitter JSONs, keeping only meaningful data on the profiles, e.g. things like a profile’s tweets, a profile’s number of likes, and other metadata provided in the JSONs.
+
+2. Using the cleaned data, design prompts all three models for three distinct outputs:
+     - A personality psychoanalysis
+     - Should capture unique traits and quirks
+     - Include in the prompt, data from step 1 about their popular tweets and opinions
+     - Written in a casual, entertaining, insightful style
+
+   - A chat system prompt
+     - Capture the essence of the personality
+     - Include interaction style & chat samples
+     - Define behavioral boundaries
+     - Make it actually usable for deployment
+
+   - Creative output of your choice
+     - Examples: insecurity analysis of the profile, a sitcom written in the style of their tweets,    an ai agent 
+     - Document your approach
+
+Technical Requirements
+- Python-based implementation
+- Use local model solution like OobaBooga hosted on a rented GPU to test prompts (reach out if you need us to help with this step, for example acquiring a GPU)
+- Clear documentation of prompt strategies
+- Proper error handling
+- Example outputs from all models
+
+Deliverables
+1. GitHub repository containing:
+   - Data processing code
+   - Prompt generation system (things like instruction template)
+   - The Prompts
+   - Model interaction code
+   - Example outputs
+
+We will have a call to go through design decisions you made along the way.
+
+Evaluation Criteria
+We will evaluate based on:
+1. Prompt design creativity and effectiveness
+2. Understanding of model differences
+3. Quality of output analysis
+4. Technical implementation
+5. Walk through of your thought process
+
